@@ -1,1 +1,4 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+View the design at
+[Login Page](https://dashboard-design-ashy.vercel.app/)
+
+[Dashboard Page](https://dashboard-design-ashy.vercel.app/dashboard)
