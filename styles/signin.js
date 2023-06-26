@@ -1,10 +1,19 @@
 import styled from "styled-components";
+import { deviceWidth } from "../constant/deviceWidth";
 
 export const Container = styled.div`
   display: flex;
   height: 100vh;
-  width: 100wh;
-  background-color: red;
+  width: 100vw;
+  flex-direction: column;
+
+  @media ${deviceWidth.tablet} {
+    flex-direction: row;
+  }
+
+  @media ${deviceWidth.laptop} {
+    flex-direction: row;
+  }
 `;
 
 export const WrapperLeft = styled.div`
@@ -12,7 +21,14 @@ export const WrapperLeft = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+
+  @media ${deviceWidth.tablet} {
+    padding: 30px;
+  }
+
+  @media ${deviceWidth.laptop} {
+    flex: 1;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -46,14 +62,26 @@ export const Text = styled.p`
 `;
 
 export const LoginContainer = styled.div`
-  width: 385px;
   flex-shrink: 0;
+  width: 90%;
+
+  @media ${deviceWidth.tablet} {
+    width: 385px;
+  }
 `;
 
 export const SocialLoginContainer = styled.div`
   display: flex;
-  gap: 25px;
+  gap: 5px;
   margin-top: 26px;
+
+  @media ${deviceWidth.tablet} {
+    gap: 25px;
+  }
+
+  @media ${deviceWidth.laptop} {
+    gap: 25px;
+  }
 `;
 export const InputContainer = styled.div`
   height: 317px;
@@ -72,4 +100,4 @@ export const RegisterTextContainer = styled.div`
   justify-content: center;
   margin-top: 20px;
   gap: 2px;
-`
+`;

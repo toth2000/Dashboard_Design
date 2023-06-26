@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+
 export const Container = styled.div`
-  width: 180px;
+  flex: 1;
   height: 30px;
   flex-shrink: 0;
   border-radius: 10px;
