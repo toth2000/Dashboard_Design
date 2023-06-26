@@ -11,6 +11,7 @@ export const Container = styled.div`
 
   @media ${deviceWidth.laptop} {
     height: 100%;
+    padding-right: 20px;
   }
 `;
 

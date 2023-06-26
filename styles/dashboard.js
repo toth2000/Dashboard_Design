@@ -60,9 +60,10 @@ export const ActivityContainer = styled.div`
 
   @media ${deviceWidth.laptop} {
     margin: 0;
-    margin-right: 60px;
     width: auto;
   }
+
+
 `;
 
 export const CardContainer = styled.div`
@@ -78,7 +79,12 @@ export const CardContainer = styled.div`
   }
 
   @media ${deviceWidth.laptop} {
+    gap: 10px;
     margin: 0;
-    margin-right: 60px;
+    width: 100%;
+  }
+
+  @media ${deviceWidth.laptopL} {
+    gap: 40px;
   }
 `;

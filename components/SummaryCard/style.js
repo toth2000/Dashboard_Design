@@ -11,10 +11,19 @@ export const Container = styled.div`
   border-radius: 20px;
   justify-content: space-between;
   background: ${(props) => props.background};
-
+  
   @media ${deviceWidth.tablet} {
     width: 221.053px;
   }
+  
+  @media ${deviceWidth.laptop} {
+    flex-grow: 1;
+  }
+
+  @media ${deviceWidth.laptopL} {
+    flex-grow: 0;
+  }
+
 `;
 
 export const LeftWrapper = styled.div`
