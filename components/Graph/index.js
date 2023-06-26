@@ -97,7 +97,7 @@ const Graph = () => {
               tickLabels: {
                 stroke: "#858585",
                 tectDecoration: "none",
-                fontSize: "14px",
+                fontSize: "10px",
                 fontFamily: "Open Sans",
                 fontWeight: 300,
               },
