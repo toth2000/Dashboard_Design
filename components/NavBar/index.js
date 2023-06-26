@@ -7,6 +7,7 @@ import {
   Input,
   Icon,
   Image_Component,
+  IconContainer,
 } from "./style";
 import search_icon from "../../public/search_icon.svg";
 import notification_icon from "../../public/notification_icon.svg";
@@ -23,8 +24,10 @@ const NavBar = () => {
           <Input placeholder="Search..." />
           <Icon src={search_icon} height={"12px"} width={"12px"} />
         </InputContainer>
-        <Icon src={notification_icon} height={"20px"} width={"18px"} />
-        <Image_Component src={profile_img} />
+        <IconContainer>
+          <Icon src={notification_icon} height={"20px"} width={"18px"} />
+          <Image_Component src={profile_img} />
+        </IconContainer>
       </WrapperRight>
     </Container>
   );

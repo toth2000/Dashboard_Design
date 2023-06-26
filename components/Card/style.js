@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { deviceWidth } from "../../constant/deviceWidth";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -10,8 +11,12 @@ export const HeaderContainer = styled.div`
 export const Container = styled.div`
   background: #fff;
   border-radius: 20px;
-  flex: 1;
   height: 256px;
+  
+  @media ${deviceWidth.tablet} {
+    flex: 1;
+  }
+  
 `;
 
 export const WrapperContainer = styled.div`

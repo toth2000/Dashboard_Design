@@ -1,4 +1,4 @@
-import { VictoryLine, VictoryChart, VictoryAxis, VictoryTheme } from "victory";
+import { VictoryLine, VictoryChart, VictoryAxis } from "victory";
 import {
   ChartContainer,
   Container,
@@ -14,8 +14,22 @@ import {
 } from "./style";
 
 import arrow_down from "../../public/arrow_down_icon.svg";
+import { useEffect, useState } from "react";
 
 const Graph = () => {
+
+  const [width, setWidth] = useState(0); // default width, detect on server.
+  const handleResize = () => setWidth(window.innerWidth);
+
+  useEffect(()=>{
+    setWidth(window.innerWidth);
+  },[])
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
+
   const sampleData = [
     [
       { x: 1, y: 50 },
@@ -56,7 +70,7 @@ const Graph = () => {
       </Container>
       <ChartContainer>
         <VictoryChart
-         width={900}
+         width={width * 0.6}
           domainPadding={{ x: 25 }}
           padding={{ top: 50, bottom: 50, right: 0, left: 0 }}
         >

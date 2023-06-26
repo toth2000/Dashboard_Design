@@ -1,14 +1,20 @@
 import Image from "next/image";
 import styled from "styled-components";
+import { deviceWidth } from "../../constant/deviceWidth";
+
 
 export const Container = styled.div`
   display: flex;
-  width: 221.053px;
+  width: 95%;
   height: 120px;
   flex-shrink: 0;
   border-radius: 20px;
   justify-content: space-between;
   background: ${(props) => props.background};
+
+  @media ${deviceWidth.tablet} {
+    width: 221.053px;
+  }
 `;
 
 export const LeftWrapper = styled.div`
